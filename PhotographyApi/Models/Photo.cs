@@ -15,9 +15,6 @@ namespace PhotographyApi.Models
 
         public int Id { get; set; }
 
-        [ForeignKey("PhotographerReference")]
-        public int? PhotographerReferenceId { get; set; }
-
         public string Filename { get; set; }
 
         public string Description { get; set; }
@@ -32,8 +29,6 @@ namespace PhotographyApi.Models
         public Guid Guid { get; set; }
 
         public string Url { get; set; }
-
-        public PhotographerReference PhotographerReference { get; set; }
 
         public ICollection<Gallery> Galleries { get; set; }
     }

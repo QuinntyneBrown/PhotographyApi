@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using PhotographyApi.Dtos;
 
-namespace PhotoManagerApi.Services.Contracts
+namespace PhotographyApi.Services.Contracts
 {
     public interface IPhotoService
     {
