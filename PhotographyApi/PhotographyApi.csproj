@@ -171,7 +171,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="initial.txt" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
@@ -180,6 +179,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiConfiguration.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\PhotoController.cs" />
