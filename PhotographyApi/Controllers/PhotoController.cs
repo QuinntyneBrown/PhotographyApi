@@ -6,15 +6,17 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using Common.Controllers;
 using PhotographyApi.Data;
+using PhotographyApi.Data.Contracts;
 using PhotographyApi.Models;
 using PhotographyApi.Services;
+using PhotographyApi.Services.Contracts;
 
 namespace PhotographyApi.Api
 {
     [RoutePrefix("api/photo")]
     public class PhotoController : EFController<Photo>
     {
-        public PhotoController(PhotoManagerUow uow, PhotoService photoService)
+        public PhotoController(IPhotographyUow uow, IPhotoService photoService)
         {
             this.uow = uow;
             this.repository = uow.Photos;
@@ -51,6 +53,8 @@ namespace PhotographyApi.Api
             return base.Add(entity);
         }
 
-        protected readonly PhotoService photoService;
+        protected readonly new IPhotographyUow uow;
+
+        protected readonly IPhotoService photoService;
     }
 }

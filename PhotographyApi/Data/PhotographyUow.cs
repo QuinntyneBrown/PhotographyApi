@@ -1,10 +1,11 @@
 ﻿using Common.Data;
 using Common.Data.Contracts;
+using PhotographyApi.Data.Contracts;
 using PhotographyApi.Models;
 
 namespace PhotographyApi.Data
 {
-    public class PhotoManagerUow : BaseUow
+    public class PhotoManagerUow : BaseUow, IPhotographyUow
     {
         public PhotoManagerUow(PhotographyContext photographyContext)
             : base(photographyContext)

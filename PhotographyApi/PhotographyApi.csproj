@@ -179,10 +179,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiConfiguration.cs" />
-    <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\PhotoController.cs" />
+    <Compile Include="Data\Contracts\IPhotographyContext.cs" />
+    <Compile Include="Data\Contracts\IPhotographyUow.cs" />
     <Compile Include="Data\PhotographyContext.cs" />
     <Compile Include="Data\PhotographyUow.cs" />
     <Compile Include="Dtos\PhotoDto.cs" />
@@ -193,8 +193,8 @@
     <Compile Include="Services\Contracts\IPhotoService.cs" />
     <Compile Include="Services\InMemoryMultipartFormDataStreamProvider.cs" />
     <Compile Include="Services\PhotoService.cs" />
-    <Compile Include="StartUp\OwinStartUp.cs" />
-    <Compile Include="WebApiConfiguration.cs" />
+    <Compile Include="ApiConfiguration.cs" />
+    <Compile Include="UnityConfiguration.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

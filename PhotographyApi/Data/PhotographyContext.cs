@@ -1,10 +1,11 @@
 ﻿using System.Data.Entity;
 using Common.Data.Contracts;
+using PhotographyApi.Data.Contracts;
 using PhotographyApi.Models;
 
 namespace PhotographyApi.Data
 {
-    public class PhotographyContext : DbContext, IDbContext
+    public class PhotographyContext : DbContext, IPhotographyContext
     {
         public PhotographyContext()
             : base(nameOrConnectionString: "photography")
