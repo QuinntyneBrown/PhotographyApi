@@ -13,9 +13,20 @@ namespace PhotographyApi
         public static IUnityContainer GetContainer(bool useMock = false)
         {
             var container = new UnityContainer();
-            container.RegisterType<IPhotographyUow, PhotoManagerUow>();
-            container.RegisterType<IPhotographyContext, PhotographyContext>();
+
+            if (useMock)
+            {
+
+            }
+            else
+            {
+                
+                container.RegisterType<IPhotographyUow, PhotoManagerUow>();
+                container.RegisterType<IPhotographyContext, PhotographyContext>();                
+            }
+
             return container;
+            
         }
     }
 }
