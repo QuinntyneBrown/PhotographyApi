@@ -5,6 +5,8 @@ using System.Web;
 using Microsoft.Practices.Unity;
 using PhotographyApi.Data;
 using PhotographyApi.Data.Contracts;
+using PhotographyApi.Services;
+using PhotographyApi.Services.Contracts;
 
 namespace PhotographyApi
 {
@@ -22,7 +24,9 @@ namespace PhotographyApi
             {
                 
                 container.RegisterType<IPhotographyUow, PhotoManagerUow>();
-                container.RegisterType<IPhotographyContext, PhotographyContext>();                
+                container.RegisterType<IPhotographyContext, PhotographyContext>();
+                container.RegisterType<IPhotoService, PhotoService>();
+
             }
 
             return container;
